@@ -250,7 +250,7 @@ if (!dev) {
   // Minification du JS seulement en production (pas en dev)
   config.plugins.push(new minificationPlugin({
     // Forcer Uglify a exporté les sources map en mettant true
-    sourceMap: false
+    sourceMap: true
   }))
   config.plugins.push(new minimizeCss())
   config.plugins.push(new manifestPlugin())
