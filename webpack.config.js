@@ -117,7 +117,7 @@ const config = {
   output: {
     path: path.resolve('./dist'),
     filename: dev ? 'js/[name].js' : 'js/[name].[hash:4].js',
-    publicPath: ''
+    publicPath: dev ? '/dist/' : ''
   },
   // Environnement de dev
   mode: 'development',
