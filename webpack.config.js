@@ -117,7 +117,7 @@ const config = {
   output: {
     path: path.resolve('./dist'),
     filename: dev ? 'js/[name].js' : 'js/[name].[hash:4].js',
-    publicPath: '/dist/'
+    publicPath: ''
   },
   // Environnement de dev
   mode: 'development',
@@ -186,7 +186,8 @@ const config = {
             options: {
               limit: 8192,
               name: '[name].[hash:4].[ext]',
-              outputPath: 'assets/images'
+              outputPath: 'assets/images',
+              esModule: false
             }
           },
           'img-loader'
@@ -201,7 +202,8 @@ const config = {
             options: {
               limit: 8192,
               name: '[name].[hash:4].[ext]',
-              outputPath: 'assets/images/svg'
+              outputPath: 'assets/images/svg',
+              esModule: false
             }
           },
           'img-loader'
