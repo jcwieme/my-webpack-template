@@ -177,6 +177,19 @@ const config = {
         test: /\.html$/,
         loader: 'html-loader'
       },
+      {
+        type: 'javascript/auto',
+        test: /\.json$/,
+        exclude: /(node_modules|bower_components)/,
+        include: path.resolve('./src/json'),
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'assets/json'
+          }
+        }]
+      },
       // File loader for images
       {
         test: /\.(jpe?g|png|gif)$/i,
